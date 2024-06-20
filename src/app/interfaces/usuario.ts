@@ -10,3 +10,13 @@ export interface Usuario {
         adeudo:number,
 
 }
+
+export interface Login{
+        email: string;
+        password: string;
+}
+
+export interface ResponseI{
+        status: string;
+        token: any;
+}

@@ -1,0 +1,41 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.cont_login{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 10px;
+    background-color: rgb(255, 245, 230);
+}
+
+.cont_form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input{
+    width: 100%;
+}
+
+.cont_input{
+    width: 60%;
+}
+
+button{
+    margin-top: 30px;
+}
+

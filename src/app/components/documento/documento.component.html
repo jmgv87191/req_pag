@@ -1,0 +1,11 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="sendCveusu()">
+      <input formControlName="cveusu" type="text">
+      <button type="submit">Generar documento</button>
+    </form>
+  
+    <qrcode style="display: none;" [qrdata]="mensajeOriginal" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  
+    <button (click)="descifrarMensaje(mensajeCifrado)" >Descifrar</button> 
+  
+  </div>

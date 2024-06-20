@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
-import { Usuario } from '../interfaces/usuario';
+import { Login, ResponseI, Usuario } from '../interfaces/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +11,14 @@ export class DocumentService {
 
   private appUrl: string;
   private apiUrl: string;
+  private url: string;
+
 
   constructor( private http:HttpClient ) { 
 
     this.appUrl = environment.endpoint;
     this.apiUrl = 'api/tomas/'
+    this.url = 'https://portalweb.sapalapaz.gob.mx/api/requirimiento/token';
 
   }
 
@@ -32,6 +35,12 @@ export class DocumentService {
 
   } 
 
+  loginByEmail(form:Login):Observable<ResponseI>{
+
+    let direccion = this.url  
+    return this.http.post<ResponseI>(direccion,form);
+
+  } 
 
 
 
