@@ -15,17 +15,15 @@ export class DecodificarComponent implements OnInit {
 
   texto: any = "a"
   mensajeDescifrado: string = ''
+  mensajeCifrado: string = 'aHR0cHM6Ly9yZXF1ZXJpbWllbnRvcy5zYXBhbGFwYXouZ29iLm14L2RlY29kaWZpY2FyLw=='
 
   ngOnInit(): void {
 
     this.texto = this.aRoute.snapshot.paramMap.get('id')
     
     console.log( this.texto )
-    
-    setTimeout(() => {
       
       console.log(this.descifrarMensaje( 'aHR0cHM6Ly9yZXF1ZXJpbWllbnRvcy5zYXBhbGFwYXouZ29iLm14L2RlY29kaWZpY2FyLw==' )) 
-    }, 5000);
 
   }
 

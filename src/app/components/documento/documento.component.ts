@@ -239,7 +239,7 @@ export class DocumentoComponent {
     doc.text('C.c.p. Archivo.', 30, 265);
 
     // this.mensajeOriginal = this.usuario.name +" "+ this.usuario.adeudo + " "+ this.usuario.noCta
-    this.mensajeOriginal = "https://requerimientos.sapalapaz.gob.mx/decodificar/"
+    this.mensajeOriginal = "http://localhost:4200/decodificar/"
 
     console.log( this.cifrarMensaje(  this.mensajeOriginal) )
 
@@ -260,7 +260,7 @@ export class DocumentoComponent {
   cifrarMensaje(mensaje:string) {
     // Convertir a Base64
     this.mensajeCifrado = btoa(mensaje);
-    return 'https://requerimientos.sapalapaz.gob.mx/decodificar' + this.mensajeCifrado
+    return 'http://localhost:4200/decodificar/'+this.mensajeCifrado
   }
 
   descifrarMensaje(mensaje:string) {

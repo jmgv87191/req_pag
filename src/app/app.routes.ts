@@ -13,7 +13,7 @@ export const routes: Routes = [
         component: DocumentoComponent
     },
     {
-        path: 'decodificar/:id',
+        path: 'decodificar',
         component: DecodificarComponent
     },
 
